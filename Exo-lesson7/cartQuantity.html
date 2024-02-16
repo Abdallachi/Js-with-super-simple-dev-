@@ -53,15 +53,21 @@
     <script>
       let cartQuantity = 0;
 
+/*Le retour anticipé (early return)*/ 
+
       function updateCartQuantity(add) {
         if (cartQuantity + add < 0) {
-            alert('Not enough items in the cart');                                                                       
-        } else if (cartQuantity + add > 10) {
+            alert('Not enough items in the cart');
+            return;                                                                       
+        }
+        
+        if (cartQuantity + add > 10) {
             alert(`The cart is full`);
-        } else {
+            return;
+        }
+
             cartQuantity += add
             console.log(`cart quantity: ${cartQuantity}`);
-        }
       }
     </script>
   </body>
