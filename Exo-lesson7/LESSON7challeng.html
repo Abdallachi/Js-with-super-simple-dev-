@@ -70,7 +70,8 @@
         // Avoid using eval() in real world projects since
         // it can potentially be given harmful code to run.
         // Only use eval() for learning purposes.
-       updateCalculation(' = ')
+       calculation = eval(calculation);
+       console.log(calculation);
       ">=</button>
 
       <button onclick="
@@ -88,74 +89,8 @@
     <script>
       let calculation = '';
       function updateCalculation(added) {
-        if (added === '1') {
-          calculation += '1';
-          console.log(calculation);
-        }
-        if (added === '2') {
-          calculation += '2';
-          console.log(calculation);
-        }
-        if (added === '3') {
-          calculation += '3';
-          console.log(calculation);
-        }
-        if (added === ' + ') {
-          calculation += ' + ';
-          console.log(calculation);
-        }
-
-        if (added === '4') {
-          calculation += '4';
-          console.log(calculation);
-        }
-        if (added === '5') {
-          calculation += '5';
-          console.log(calculation);
-        }
-        if (added === '6') {
-          calculation += '6';
-          console.log(calculation);
-        }
-        if (added === ' - ') {
-          calculation += ' - ';
-        }
-        if (added === '7') {
-          calculation += '7';
-          console.log(calculation);
-        }
-        if (added === '8') {
-          calculation += '8';
-          console.log(calculation);
-        }
-        if (added === '9') {
-          calculation += '9';
-          console.log(calculation);
-        }
-        if (added ===' * ') {
-          calculation += ' * ';
-          console.log(calculation);
-        }
-        if (added === '0') {
-          calculation += '0';
-          console.log(calculation);
-        }
-        if (added === ' . ') {
-          calculation += ' . ';
-          console.log(calculation);
-        }
-        if (added === eval(calculation) ) {
-          calculation = eval(calculation);
-        console.log(calculation);
-        }
-        if (added === ' / ') {
-          calculation += ' / ';
-          console.log(calculation);
-        }
-        if (added === '') {
-          calculation += '';
-          console.log(calculation);
-        }
+       calculation += added;
+       console.log(calculation); 
       }
     </script>
   </body>
