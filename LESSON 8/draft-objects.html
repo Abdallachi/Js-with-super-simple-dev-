@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft Objects</title>
+</head>
+<body>
+    
+    <script>
+        const devices = {
+            iphone : "6s",
+            price : 100,
+            storage : 128
+        };
+        console.log(devices);
+        devices.iphone = "Pro max";
+        devices.price = 200;
+        devices.storage =256;
+        console.log(devices);
+        
+        devices.battery = 80;
+        devices.color = "Argent";
+        console.log(devices);
+
+        delete devices.color;
+        console.log(devices);
+
+
+    </script>
+
+</body>
+</html>
